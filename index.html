@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f6f7f4">
+    <meta name="description" content="Practice interview questions with ready-made technical, coding, and behavioral question sets.">
+    <title>Prepwise — Interview practice, made personal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="#" aria-label="Prepwise home">
+        <span class="brand-mark" aria-hidden="true">p</span>
+        <span>prepwise<span class="brand-period">.</span></span>
+      </a>
+      <div class="topbar-note"><span class="status-dot"></span> Your next interview starts here</div>
+      <a class="topbar-link" href="#generator">Get started <span aria-hidden="true">↗</span></a>
+    </header>
+
+    <main>
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <div class="eyebrow"><span class="eyebrow-line"></span> A little practice goes a long way</div>
+          <h1 id="hero-title">Show up ready.<br><span>Be unmistakably you.</span></h1>
+          <p>Thoughtful interview practice, with ready-made question sets for the role you want.</p>
+          <div class="hero-proof">
+            <div class="avatar-stack" aria-hidden="true"><span>A</span><span>M</span><span>J</span><span>+</span></div>
+            <span>Make your next answer your best one.</span>
+          </div>
+        </div>
+        <div class="hero-art" aria-hidden="true">
+          <div class="orbit orbit-one"></div>
+          <div class="orbit orbit-two"></div>
+          <div class="spark spark-one">✳</div>
+          <div class="spark spark-two">✦</div>
+          <div class="hero-card">
+            <span class="hero-card-icon">✳</span>
+            <span class="hero-card-label">YOUR PRACTICE, YOUR WAY</span>
+            <span class="hero-card-title">Good answers<br>start with <em>you.</em></span>
+            <div class="hero-card-footer"><span>PERSONALIZED PRACTICE</span><span>01 — 08</span></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="workspace" id="generator" aria-label="Interview question sets">
+        <div class="form-panel">
+          <div class="section-heading">
+            <span class="step-label">01 <span class="step-rule"></span> YOUR PROFILE</span>
+            <h2>Pick your practice set.</h2>
+            <p>Choose a focus and get straight to practicing—no account or setup needed.</p>
+          </div>
+
+          <form id="generator-form">
+            <div class="field">
+              <label for="role">Role you’re preparing for <span class="optional">(optional)</span></label>
+              <input id="role" name="role" type="text" placeholder="e.g. Software Engineer" value="Software Engineer" maxlength="80">
+            </div>
+
+            <div class="field">
+              <label for="programming-language">Programming language</label>
+              <div class="select-wrap">
+                <select id="programming-language" name="programmingLanguage">
+                  <option value="">Any language</option>
+                  <option value="JavaScript">JavaScript</option>
+                  <option value="TypeScript">TypeScript</option>
+                  <option value="Python">Python</option>
+                  <option value="Java">Java</option>
+                  <option value="C#">C#</option>
+                  <option value="C++">C++</option>
+                  <option value="Go">Go</option>
+                  <option value="Rust">Rust</option>
+                  <option value="Kotlin">Kotlin</option>
+                  <option value="PHP">PHP</option>
+                  <option value="Ruby">Ruby</option>
+                  <option value="SQL">SQL</option>
+                  <option value="Swift">Swift</option>
+                </select>
+                <span class="select-chevron" aria-hidden="true">⌄</span>
+              </div>
+            </div>
+
+            <div class="field resume-field">
+              <label for="resume-file">Resume <span class="optional">(optional)</span></label>
+              <label class="upload-box" for="resume-file">
+                <span class="upload-icon" aria-hidden="true">↑</span>
+                <span class="upload-text"><strong id="resume-file-name">Choose a resume file</strong><span>Plain text or Markdown</span></span>
+                <span class="upload-formats">TXT · MD</span>
+              </label>
+              <input class="visually-hidden" id="resume-file" name="resume" type="file" accept=".txt,.md,text/plain,text/markdown">
+              <label class="visually-hidden" for="resume-highlights">Resume highlights</label>
+              <textarea id="resume-highlights" name="resumeHighlights" maxlength="8000" placeholder="Or paste a few resume highlights here…"></textarea>
+              <span class="privacy-note"><span aria-hidden="true">⌑</span> Your resume stays in this browser.</span>
+            </div>
+
+            <fieldset class="field question-types">
+              <legend>What would you like to practice? <span class="required">*</span></legend>
+              <div class="type-options">
+                <label class="type-option"><input type="checkbox" name="category" value="Technical" checked><span class="type-icon technical-icon">⌘</span><span>Technical</span></label>
+                <label class="type-option"><input type="checkbox" name="category" value="Coding" checked><span class="type-icon coding-icon">&lt;/&gt;</span><span>Coding</span></label>
+                <label class="type-option"><input type="checkbox" name="category" value="Behavioral"><span class="type-icon behavioral-icon">✳</span><span>Behavioral</span></label>
+              </div>
+            </fieldset>
+
+            <div class="field count-field">
+              <label for="question-count">Number of questions</label>
+              <div class="select-wrap count-select">
+                <select id="question-count" name="questionCount">
+                  <option value="4">4 questions</option>
+                  <option value="6" selected>6 questions</option>
+                  <option value="8">8 questions</option>
+                </select>
+                <span class="select-chevron" aria-hidden="true">⌄</span>
+              </div>
+            </div>
+
+            <p class="form-error" id="form-error" role="alert" hidden></p>
+            <button class="generate-button" type="submit"><span>Show me questions</span><span class="button-arrow" aria-hidden="true">↗</span></button>
+            <p class="form-footnote">Practice sets work offline · AI feedback needs your server and OpenAI key <span aria-hidden="true">✳</span></p>
+          </form>
+        </div>
+
+        <div class="results-panel" aria-live="polite" aria-atomic="false">
+          <div class="results-header">
+            <div>
+              <span class="step-label">02 <span class="step-rule"></span> YOUR PRACTICE SET</span>
+              <h2 id="results-title">Your questions, <em>your moment.</em></h2>
+            </div>
+            <div class="results-actions" id="results-actions" hidden>
+              <button class="icon-button" id="copy-button" type="button" aria-label="Copy questions" title="Copy questions">▢</button>
+              <button class="icon-button" id="download-button" type="button" aria-label="Download questions" title="Download questions">↓</button>
+            </div>
+          </div>
+          <div class="results-meta" id="results-meta" hidden></div>
+          <div class="question-list" id="question-list">
+            <div class="empty-state">
+              <div class="empty-illustration" aria-hidden="true"><span>✳</span><span>?</span><span>✦</span></div>
+              <h3>Your next great answer is in here.</h3>
+              <p>Choose a question type and number of questions to open a ready-made practice set.</p>
+              <div class="empty-steps"><span><b>01</b> Add your role</span><span><b>02</b> Pick a focus</span><span><b>03</b> Start practicing</span></div>
+            </div>
+          </div>
+          <div class="results-footer" id="results-footer" hidden><span><span class="status-dot"></span> You’ve got this. Take them one at a time.</span><button id="regenerate-button" type="button">New set <span aria-hidden="true">↻</span></button></div>
+          <p class="prototype-note">When you check an answer, its question, follow-up, category, selected language, and answer are sent to OpenAI for feedback. Resume contents and practice notes are not sent. OpenAI data handling applies.</p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer"><a class="brand footer-brand" href="#"><span class="brand-mark" aria-hidden="true">p</span><span>prepwise<span class="brand-period">.</span></span></a><span>Thoughtful practice for wherever you’re headed.</span><span>Made for your next chapter <span class="footer-star">✳</span></span></footer>
+  </body>
+</html>
